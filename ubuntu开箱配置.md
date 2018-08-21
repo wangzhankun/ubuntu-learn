@@ -11,7 +11,9 @@ sudo apt install emacs
 sudo apt update    
 sudo apt install vim    
 ### wps
-download wps for linux [wps](http://community.wps.cn/download/ "wps_for_linux")     
+download wps for linux [wps](http://community.wps.cn/download/ "wps_for_linux")   
+### remarkable
+download remarkable for linux [remarkable](http://remarkableapp.github.io/ "remarkable")     
 ### start ipv6
 sudo apt install miredo    
 sudo gedit /etc/default/ufw   
