@@ -75,7 +75,7 @@
    * locale命令可以列出语系变量及其值。          
    * locale -a命令列出系统已经安装的可支持语系。           
    * 系统语系定义在/etc/default/locale    
-# 变量键盘读取、数组、与声明
+# 变量键盘读取与声明
 ## read
    read [-pt] variable   
    -p:后面可以接提示符   
