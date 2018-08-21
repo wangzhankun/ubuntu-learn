@@ -9,6 +9,9 @@ sudo apt update
 sudo apt install emacs  
 ### virtualbox
 download virtualbox[virtualbox](https://www.virtualbox.org/wiki/Downloads "virtualbox")   
+### deepin-wine
+git clone https://github.com/HarryPotterJackson/deepin-wine-ubuntu.git    
+./install.sh    
 ### vim
 sudo apt update    
 sudo apt install vim    
