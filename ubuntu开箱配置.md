@@ -6,7 +6,9 @@
 download chrome [chrome](https://www.chrome64bit.com/index.php/google-chrome-64-bit-for-linux "chrome")     
 ### emacs
 sudo apt update         
-sudo apt install emacs     
+sudo apt install emacs  
+### utorrent
+download utorrent [utorrent](https://www.utorrent.com/intl/zh/downloads/linux "torrent")   
 ### vim
 sudo apt update    
 sudo apt install vim    
