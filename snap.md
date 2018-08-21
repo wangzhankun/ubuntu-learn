@@ -13,7 +13,29 @@ snap 打包的应用不同于deb，其包含了各种依赖环境。
 Snap 通常从 Snap Store 安装。您可以在不登录的情况下与 Snap Store 进行交互，但登录可提供许多优势。这些优势包括能够访问您的私人快照和管理快照而无需设备上的 root 。**概括来说：可以不登录，但是大部分命令就需要使用 sudo ，登录账户后则无需使用。此外登录账户后才可以发布 snap 包。**
 * 查找snap包   
    
-   snap find \<query>    
- * 安装snap包
+   snap find \<query>      
+ * 安装snap包    
      
-    snap install \<snap>     
+    snap install \<snap>       
+    \--devmode：将snap设置为开发模式并禁用安全限制。   
+    \--classic：将snap设置为经典模式并禁用安全限制。    
+ * 删除snap包    
+    
+    snap remove \<snap>     
+ * 更新      
+    
+    snap refresh \<snap>    
+    \--list:显示可用的快照进行刷新。    
+ * 还原snap至初始安装状态      
+    
+    snap revert \<snap>    
+ * 禁用与启用    
+    
+    snap disable \<snap>    
+    snap enable \<snap>    
+ * 列出所有snap包   
+    
+    snap list \<snap>   
+ * 安装软件   
+    
+    snap install \<snap> \--classic
