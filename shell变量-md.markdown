@@ -89,4 +89,14 @@
          #read -p "Please keyin your name:" -t 30 named      
 	 **Please keyin your name:** VBird Tsai~~会有提示符提醒输入~~     
 	 #echo $named    
-	 **VBird Tsai**~~输入的数据变成了变量内容~~
+	 **VBird Tsai**~~输入的数据变成了变量内容~~    
+## declare/typeset
+#### 用于声明变量类型。
+* 语法：declare [-aixr] variable        
+   -a:数组（arry）               
+   -i：整数（integer）    
+   -x：环境变量       
+   -r：将变量设为readonly，变量内容不可更改    
+#### 在默认情况下，bash对于变量有如下基本定义
+   * 变量内容默认为字符串。如1+2就是一个字符串，不是计算式。    
+   * bash数值运算默认仅能在整数内进行。    
