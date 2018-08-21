@@ -5,12 +5,6 @@
 * 注意：MAIL是变量名称，mail是命令。
 * mail命令通过MAIL变量进行读取。
 ## 影响bash环境操作的变量
-### 环境变量
-* PATH罗列出shell搜索用户输入的命令所在的目录。
-* HOME（LUNIX）和userprofile（Microsoft Windows）表示用户的主目录在文件系统中的位置。
-* TERM (类Unix系统) 指定使用终端或虚拟终端 的类型 (如, vt100 or dumb)。
-* CVS_RSH (类Unix系统) 该选项可用于 ext 方式中指明 cvs 客户端寻找远端 shell 的路径，用作连接 cvs 服务器和以更高的优先权覆盖 $CVS_RSH 环境变量中指定的路径。
-* MAIL (类Unix系统) 当前用户的邮件存放目录。
 ## shell script的好帮手
 * 编写较为大型的shell script时，可以在script最前面定义某变量表示什么内容，当需要进行修改时，只需要修改变量即可。
 * * * * * * *
@@ -50,3 +44,22 @@
 
 10.取消变量的方法为使用"unset 变量名称"，例如取消myname的设置：     
    * "unset mtname"
+# 环境变量
+## env命令列出当前shell环境下所有的环境变量及其内容
+* PATH罗列出shell搜索用户输入的命令所在的目录。     
+* HOME（LUNIX）和userprofile（Microsoft Windows）表示用户的主目录在文件系统中的位置。    
+* TERM (类Unix系统) 指定使用终端或虚拟终端 的类型 (如, vt100 or dumb)。     
+* CVS_RSH (类Unix系统) 该选项可用于 ext 方式中指明 cvs 客户端寻找远端 shell 的路径，用作连接 cvs 服务器和以更高的优先权覆盖 $CVS_RSH 环境变量中指定的路径。       
+* MAIL (类Unix系统) 当前用户的邮件存放目录。     
+* SHELL 告知这个环境使用的是shell的哪个程序。      
+* HISTSIZE 与历史命令有关，表示记录的最大“条数”。    
+* LANG 语系数据。    
+* RANDOM 随机数变量。可以随机取出一个整数，范围与系统有关。
+**********
+## set命令查看所有变量，环境变量和自定义变量
+**********
+## PS1（提示符设置）
+* \\u:当前用户账户名称。
+* \\w（小写）：完整目录名称。
+* 其他请自行man
+**********
