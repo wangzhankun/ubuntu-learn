@@ -66,8 +66,8 @@
 #### $:本shell的PID
 #### ?:关于上个执行命令的回传码。
 若上个命令执行成功，值为0，否则为非零值。     
-## OSTYPE,HOSTTYPE,MACHTYPE：主机硬件与内核的等级。
-## PS1（提示符设置，为环境变量）
+#### OSTYPE,HOSTTYPE,MACHTYPE：主机硬件与内核的等级。
+#### PS1（提示符设置，为环境变量）
    * \\u:当前用户账户名称。   
    * \\w（小写）：完整目录名称。   
    * 其他请自行man   
@@ -80,4 +80,8 @@
    read [-pt] variable   
    -p:后面可以接提示符   
    -t：后面可以接等待的秒数   
-      * 范例一：
+      * 范例一：   
+         #read atest   
+	 This is a test		**此时光标会等待输入**   
+	 #echo $atest   
+	 This is a test
