@@ -35,16 +35,14 @@ sudo apt install chrome-gnome-shell
 ### wps
 download wps for linux [wps](http://community.wps.cn/download/ "wps_for_linux")   
 ### remarkable
-download remarkable for linux [remarkable](http://remarkableapp.github.io/ "remarkable")     
-### start ipv6
-sudo apt install miredo    
-sudo gedit /etc/default/ufw   
-* change "ipv6=no" into "ipv6=yes" (maybe you should try many times )    
-sudo ufw disable     
-sudo ufw enable    
+download remarkable for linux [remarkable](http://remarkableapp.github.io/ "remarkable")   
+### zeal
+sudo apt install zeal
 ### lantern
-download lantern [lantern](https://github.com/HarryPotterJackson/lantern "lantern for linux")   
-## system language
+download lantern [lantern](https://github.com/HarryPotterJackson/lantern "lantern for linux")  
+*************************
+## 系统设置
+### system language
 if you install ubuntu with chinese language, you will find that the dir are "桌面 文档” etc...   
 It is diffcult to chang directory.    
 You can do the following:     
@@ -52,4 +50,10 @@ You can do the following:
 * reboot    
 * change the system language into chinese    
 * reboot     
-* at the beginning, ubuntu will remind you if you want to chang directoy name, choose "否“     
+* at the beginning, ubuntu will remind you if you want to chang directoy name, choose "否“    
+### start ipv6
+sudo apt install miredo    
+sudo gedit /etc/default/ufw   
+* change "ipv6=no" into "ipv6=yes" (maybe you should try many times )    
+sudo ufw disable     
+sudo ufw enable    
