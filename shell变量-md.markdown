@@ -82,6 +82,11 @@
    -t：后面可以接等待的秒数   
       * 范例一：   
          #read atest   
-	 This is a test		**此时光标会等待输入**   
+	 This is a test~~此时光标会等待输入~~   
 	 #echo $atest   
-	 This is a test
+	 **This is a test**~~刚才输入的数据变成了变量内容~~    
+      * 范例二：
+         #read -p "Please keyin your name:" -t 30 named      
+	 **Please keyin your name:** VBird Tsai~~会有提示符提醒输入~~     
+	 #echo $named    
+	 **VBird Tsai**~~输入的数据变成了变量内容~~
