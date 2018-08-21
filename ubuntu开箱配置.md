@@ -7,8 +7,8 @@ download chrome [chrome](https://www.chrome64bit.com/index.php/google-chrome-64-
 ### emacs
 sudo apt update         
 sudo apt install emacs  
-### utorrent
-download utorrent [utorrent](https://www.utorrent.com/intl/zh/downloads/linux "torrent")   
+### virtualbox
+download virtualbox[virtualbox](https://www.virtualbox.org/wiki/Downloads "virtualbox")   
 ### vim
 sudo apt update    
 sudo apt install vim    
