@@ -75,3 +75,6 @@ git fetch [name]
 ## 推送数据到远程仓库
 git push [remote-name] [branch-name]    
 **再次说明下，克隆操作会自动使用默认的 master 和 origin 名字**      
+## 远程仓库的删除和重命名
+git remote rename [old-name] [new-name]  
+git remote rm [remote-name]    
