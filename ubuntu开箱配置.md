@@ -55,6 +55,8 @@ download wps for linux [wps](http://community.wps.cn/download/ "wps_for_linux")
 ### remarkable
 download remarkable for linux [remarkable](http://remarkableapp.github.io/ "remarkable")   
 ### zeal
-sudo apt install zeal
+sudo apt install zeal     
+### gitkraken
+https://www.gitkraken.com/
 ### lantern
 download lantern [lantern](https://github.com/HarryPotterJackson/lantern "lantern for linux")  
