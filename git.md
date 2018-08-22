@@ -45,7 +45,7 @@ test/
 /TODO                 # 只忽略此目录下 TODO 文件，子目录的 TODO 不忽略                   
 build/               # 忽略所有的 build/ 目录下文件                                  
 doc/*.txt           # 忽略如 doc/notes.txt, 但是不忽略如 doc/server/arch.txt                          
-# 查看提交历史
+# 查看提交历史[wangzhi](https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2 "网址")
 $git log   
 git log -p:展开显示每次提交的内容差异    
 git log -p -number:展开显示每次提交的内容差异；number表示显示最近number次的更改。     
