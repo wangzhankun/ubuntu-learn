@@ -44,9 +44,26 @@ test/
 !lib.a                # 但是 lib.a 不忽略，即时之前设置了忽略所有的 .a                     
 /TODO                 # 只忽略此目录下 TODO 文件，子目录的 TODO 不忽略                   
 build/               # 忽略所有的 build/ 目录下文件                                  
-doc/*.txt           # 忽略如 doc/notes.txt, 但是不忽略如 doc/server/arch.txt                          
-# 查看提交历史[wangzhi](https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2 "网址")
-$git log   
-git log -p:展开显示每次提交的内容差异    
-git log -p -number:展开显示每次提交的内容差异；number表示显示最近number次的更改。     
-git log -U1 --word-diff：-U1表示上下文行数为一行；被删除的单词被【--】包括；被增加的单词被{++}包括。     
+doc/*.txt           # 忽略如 doc/notes.txt, 但是不忽略如 doc/server/arch.txt    
+
+# 记录每次更新到仓库[website](https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93)
+
+# 查看提交历史[website](https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2)
+git log    
+git log -p:展开显示每次提交的内容差异     
+git log -p -number:展开显示每次提交的内容差异；number表示显示最近number次的更改。       
+git log -U1 --word-diff：-U1表示上下文行数为一行；被删除的单词被【--】包括；被增加的单词被{++}包括。      
+git log --graph:显示 ASCII 图形表示的分支合并历史。   
+
+# 撤销操作[website](https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E6%92%A4%E6%B6%88%E6%93%8D%E4%BD%9C) 
+**请注意，有些撤销操作是不可逆的，所以请务必谨慎小心.**    
+git commit --amend:撤消刚才的提交(commit)操作.    
+
+# 远程仓库使用[website](https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8)
+## 查看当前远程库
+至少可以看到一个名为 origin 的远程库，Git 默认使用这个名字来标识你所克隆的原始仓库。       
+git remote -v:列出远程仓库和对应克隆网址     
+## 添加远程仓库
+git remote add [shortname] [url]：添加一个新的远程仓库，并指定一个简单的名字，以便将来引用。    
+上述命令只是添加一个仓库，并没有内容。增加内容执行下列命令：     
+git fetch [shortname]
