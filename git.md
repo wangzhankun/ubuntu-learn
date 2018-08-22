@@ -45,3 +45,8 @@ test/
 /TODO                 # 只忽略此目录下 TODO 文件，子目录的 TODO 不忽略                   
 build/               # 忽略所有的 build/ 目录下文件                                  
 doc/*.txt           # 忽略如 doc/notes.txt, 但是不忽略如 doc/server/arch.txt                          
+# 查看提交历史
+$git log   
+git log -p:展开显示每次提交的内容差异    
+git log -p -number:展开显示每次提交的内容差异；number表示显示最近number次的更改。     
+git log -U1 --word-diff：-U1表示上下文行数为一行；被删除的单词被【--】包括；被增加的单词被{++}包括。     
