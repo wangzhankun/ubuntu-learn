@@ -78,3 +78,28 @@ git push [remote-name] [branch-name]
 ## 远程仓库的删除和重命名
 git remote rename [old-name] [new-name]  
 git remote rm [remote-name]    
+
+# 标签[website](https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE)
+## 查看标签
+git tag:显示所有标签。                      
+git tag -l 'TAG':显示所有与标签TAG相关的tag。     
+例如：   
+$ git tag -l 'v1.4.2.\*'     
+v1.4.2.1    
+v1.4.2.2    
+v1.4.2.3    
+v1.4.2.4    
+git show [tag] :显示tag的标签信息。    
+## 创建标签
+git tag -a [tag] -m 'annotated':标签名称和附注     
+## 签署标签
+## 验证标签
+## 分享标签
+默认情况下，git push 并不会把标签传送到远端服务器上    
+git push [remote-name] [tagname]：share对应tagname的标签    
+如果要一次推送所有本地新增的标签上去    
+git push [remote-name] --tags
+
+# Git技巧[website](https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E6%8A%80%E5%B7%A7%E5%92%8C%E7%AA%8D%E9%97%A8)
+## 自动补全
+## Git命令别名
