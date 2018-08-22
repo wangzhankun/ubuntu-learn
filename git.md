@@ -6,7 +6,7 @@
 $ git help <verb>    
 $ git <verb> --help    
 $ man git-<verb>    
-# 取得项目的git仓库
+
 # 忽略某些文件
 在Git工作区的根目录下创建一个特殊的.gitignore文件，然后把要忽略的文件名填进去，Git就会自动忽略这些文件。     
 不需要从头写.gitignore文件，GitHub已经为我们准备了各种配置文件，只需要组合一下就可以使用了。所有配置文件可以直接在线浏览：https://github.com/github/gitignore       
@@ -39,9 +39,9 @@ test/
 如果名称的最后面是 (/) ，表示忽略整个目录，但同名文件不忽略。             
 通过在名称前面加 (!) ，代表不忽略。               
 例子如下：           
-# 这行是注释                                         
+\# 这行是注释                                         
 *.a                   # 忽略所有 .a 伟扩展名的文件                             
 !lib.a                # 但是 lib.a 不忽略，即时之前设置了忽略所有的 .a                     
-/TODO            # 只忽略此目录下 TODO 文件，子目录的 TODO 不忽略                   
+/TODO                 # 只忽略此目录下 TODO 文件，子目录的 TODO 不忽略                   
 build/               # 忽略所有的 build/ 目录下文件                                  
 doc/*.txt           # 忽略如 doc/notes.txt, 但是不忽略如 doc/server/arch.txt                          
