@@ -1,0 +1,9 @@
+http://php.net/manual/zh/mbstring.installation.php
+任务一：
+	安装LAMP环境
+		安装apach：sudo apt install apache2
+		安装mysql：sudo apt install mysal-server mysql-client
+		安装php：sudo apt install php
+如若无法重启apache，在/etc/apache2/apache2.conf中添加一行：ServerName localhost
+sudo service apache2 restart
+sudo apt install mbstring
