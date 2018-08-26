@@ -108,3 +108,9 @@ git push [remote-name] --tags
 # Git技巧[website](https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E6%8A%80%E5%B7%A7%E5%92%8C%E7%AA%8D%E9%97%A8)
 ## 自动补全
 ## Git命令别名
+********************************
+# 回到从前[website](https://www.youtube.com/watch?v=RhJLfEJV36w&list=PLXO45tsB95cKysjmSNln65YoUt9lwEl7-&index=5)
+git reset    
+查看每一步HEAD的变化    
+git reflog    
+
