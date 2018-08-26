@@ -32,5 +32,5 @@ stty erase ^?
 * cmd1 && cmd2：cmd1执行完毕且正确（回传码$?=0），开始执行cmd2；
 * cmd1 || cmd2：cmd1执行完毕且正确（回传码$?=0），不执行cmd2。
 
-＃　管道命令pipe
+# 管道命令pipe
 cmd1 | cmd2 | cmd3
