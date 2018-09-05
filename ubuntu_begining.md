@@ -1,5 +1,9 @@
 # ubuntu-开箱配置
 ## 系统设置
+### enable canonical partner
+sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"<br>
+sudo add-apt-repository "deb http://extras.ubuntu.com/ubuntu raring main"<br>
+sudo apt-get update<br>
 ### system language
 if you install ubuntu with chinese language, you will find that the dir are "桌面 文档” etc...   
 It is diffcult to chang directory.    
@@ -25,6 +29,8 @@ chsh -s /usr/bin/zsh
 
 
 ## 软件安装
+### git
+sudo apt install git
 ### atom
 download atom  [atom](https://atom.io/ "atom")     
 ### chrome
