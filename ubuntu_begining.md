@@ -26,7 +26,11 @@ sudo apt-get install git
 sudo apt-get install zsh    
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh     
 chsh -s /usr/bin/zsh    
-
+### prevent overheating
+TLP:power managerment tool<br>
+sudo add-apt-repository ppa:linrunner/tlp<br>
+sudo apt-get update<br>
+sudo apt-get install tlp tlp-rdw<br>
 
 ## 软件安装
 ### git
