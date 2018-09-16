@@ -31,6 +31,11 @@ TLP:power managerment tool<br>
 sudo add-apt-repository ppa:linrunner/tlp<br>
 sudo apt-get update<br>
 sudo apt-get install tlp tlp-rdw<br>
+### touchpad
+sudo apt install libinput-tools<br/>
+sudo apt-get install xdotool<br/>
+sudo gem install fusuma<br/>
+and then you must configure the gestures and website[website](https://italolelis.com/posts/multitouch-gestures-ubuntu-fusuma/)
 
 ## 软件安装
 ### git
