@@ -41,10 +41,12 @@ sudo ufw enable
 ### 双系统时间问题
 timedatectl set-local-rtc 1   
 ### 更换终端类型(ob-my-zsh)
-sudo apt-get install git    
-sudo apt-get install zsh    
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh     
-chsh -s /usr/bin/zsh    
+sudo apt install zsh zsh-completions curl
+chsh -s /bin/zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sudo apt install autojump
+vim ~/.zshrc
+        plugins=(git autojump)
 ### prevent overheating
 TLP:power managerment tool<br>
 sudo add-apt-repository ppa:linrunner/tlp<br>
