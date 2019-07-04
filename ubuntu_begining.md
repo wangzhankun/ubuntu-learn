@@ -41,10 +41,10 @@ sudo ufw enable
 ### 双系统时间问题
 timedatectl set-local-rtc 1   
 ### 更换终端类型(ob-my-zsh)
-sudo apt install zsh zsh-completions curl
-chsh -s /bin/zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-sudo apt install autojump
+sudo apt install zsh zsh-completions curl <br/>
+chsh -s /bin/zsh  <br/>
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"    <br/>
+sudo apt install autojump   <br/>
 vim ~/.zshrc
         plugins=(git autojump)
 ### prevent overheating
