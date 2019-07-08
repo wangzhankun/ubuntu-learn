@@ -137,9 +137,37 @@ deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe
 # deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
 # deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
 </pre>
-:wq    //这里仍然是vim命令，意思是写入并退出。<br/>
-sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" > /etc/apt/sources.list.d/ros-latest.list'    <br/>
-sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" >> /etc/apt/sources.list.d/ros-latest.list'    <br/>
+```bash
+:wq    //这里仍然是vim命令，意思是写入并退出。
+sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" > /etc/apt/sources.list.d/ros-latest.list'    
+sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" >> /etc/apt/sources.list.d/ros-latest.list'    
 sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654    <br/>
-sudo apt-get update && sudo apt upgrade    <br/>
-sudo apt-get install ros-kinetic-desktop-full    <br/>
+sudo apt-get update && sudo apt upgrade    
+sudo apt-get install ros-kinetic-desktop-full    
+```
+### Initialize rosdep
+在这一步的update命令上可能会由于网络原因多次失败，重复命令即可，直到成功。
+```
+sudo rosdep init    
+rosdep update
+```
+### Environment setup
+更改过终端的要把下面的内容进行对应更改。不知道啥是终端更改的忽略这句话。
+```
+echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
+我更改了终端为zsh，因此命令修改如下
+```
+echo "source /opt/ros/kinetic/setup.zsh" >> ~/.zshrc
+source ~/.zshrc
+```
+### Dependencies for building packages
+```
+sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
+```
+### 启动ROS
+```
+roscore
+```
+启动成功即可。最后使用Ctrl+c 退出ROS系统。
