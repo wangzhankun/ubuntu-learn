@@ -6,6 +6,7 @@ And the configuration should be copied ( you'd better do it before you chang any
 in case that you recover it).<br/>
 Then you can do the following:<br/>
 <pre>
+  # 这里的是18.04的镜像需要根据不同版本进行选择
   # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
   deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
   # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
@@ -99,3 +100,44 @@ download lantern [lantern](https://github.com/HarryPotterJackson/lantern "lanter
 ### chinese input
 sudo apt install fcitx     
 https://pinyin.sogou.com/linux/?r=pinyin       
+
+
+## ROS安装
+sudo apt install vim    <br/>
+sudo vim /etc/apt/sources.list  <br/>
+d G   //这是vim命令，意思是删除从当前光标到最后的所有内容。vim命令自行上网学习
+<pre>
+#将这里的所有信息直接复制粘贴即可，先删除原文件中的所有内容
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+
+# 预发布软件源，不建议启用
+# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+# 默认注释了源码仓库，如有需要可自行取消注释
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+
+# 预发布软件源，不建议启用
+# deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+</pre>
+:wq    //这里仍然是vim命令，意思是写入并退出。<br/>
+sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" > /etc/apt/sources.list.d/ros-latest.list'    <br/>
+sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" >> /etc/apt/sources.list.d/ros-latest.list'    <br/>
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654    <br/>
+sudo apt-get update && sudo apt upgrade    <br/>
+sudo apt-get install ros-kinetic-desktop-full    <br/>
