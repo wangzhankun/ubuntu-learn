@@ -103,10 +103,10 @@ https://pinyin.sogou.com/linux/?r=pinyin
 
 
 ## ROS安装
-```
-sudo apt install vim    <br/>
-sudo vim /etc/apt/sources.list  <br/>
-d G   //这是vim命令，意思是删除从当前光标到最后的所有内容。vim命令自行上网学习
+```bash
+sudo apt install vim    
+sudo vim /etc/apt/sources.list  
+d G     //这是vim命令，意思是删除从当前光标到最后的所有内容。vim命令自行上网学习
 ```
 <pre>
 #将这里的所有信息直接复制粘贴即可，先删除原文件中的所有内容
