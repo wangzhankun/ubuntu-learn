@@ -5,7 +5,7 @@ The configuration file of the software source on ubuntu is /etc/apt/sources.list
 And the configuration should be copied ( you'd better do it before you chang any configuration file
 in case that you recover it).<br/>
 Then you can do the following:<br/>
-<pre>
+```
   # 这里的是18.04的镜像需要根据不同版本进行选择
   # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
   deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
@@ -19,7 +19,7 @@ Then you can do the following:<br/>
   # 预发布软件源，不建议启用
   # deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
   # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
-</pre>
+```
 ### enable canonical partner
 sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"<br>
 sudo add-apt-repository "deb http://extras.ubuntu.com/ubuntu raring main"<br>
