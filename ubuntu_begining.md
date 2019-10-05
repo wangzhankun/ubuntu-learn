@@ -5,7 +5,7 @@ The configuration file of the software source on ubuntu is /etc/apt/sources.list
 And the configuration should be copied ( you'd better do it before you chang any configuration file
 in case that you recover it).<br/>
 Then you can do the following:<br/>
-```
+```Bash
   # 这里的是18.04的镜像需要根据不同版本进行选择
   # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
   deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
