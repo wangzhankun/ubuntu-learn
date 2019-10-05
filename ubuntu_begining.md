@@ -1,10 +1,9 @@
 # ubuntu-开箱配置
-## 系统设置
-### change ppa
-The configuration file of the software source on ubuntu is /etc/apt/sources.list<br/>
-And the configuration should be copied ( you'd better do it before you chang any configuration file
-in case that you recover it).<br/>
-Then you can do the following:<br/>
+
+
+### change mirror
+配置文件在`/etc/apt/sources.list`，可以将原配置文件修改为:这里是使用的清华的源。（注意，将原文件内容删除）
+
 ```Bash
   # 这里的是18.04的镜像需要根据不同版本进行选择
   # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
@@ -20,77 +19,44 @@ Then you can do the following:<br/>
   # deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
   # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
 ```
-### enable canonical partner
-sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"<br>
-sudo add-apt-repository "deb http://extras.ubuntu.com/ubuntu raring main"<br>
-sudo apt-get update<br>
-### system language
-if you install ubuntu with chinese language, you will find that the dir are "桌面 文档” etc...   
-It is diffcult to chang directory.    
-You can do the following:     
-* change the system language into english     
-* reboot    
-* change the system language into chinese    
-* reboot     
-* at the beginning, ubuntu will remind you if you want to chang directoy name, choose "否“    
 ### start ipv6
+
+```Bash
 sudo apt install miredo    
 sudo gedit /etc/default/ufw   
+```
+
 * change "ipv6=no" into "ipv6=yes" (maybe you should try many times )    
 sudo ufw disable     
 sudo ufw enable    
 ### 双系统时间问题
 timedatectl set-local-rtc 1   
-### 更换终端类型(ob-my-zsh)
-sudo apt install zsh zsh-completions curl <br/>
-chsh -s /bin/zsh  <br/>
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"    <br/>
-sudo apt install autojump   <br/>
-vim ~/.zshrc
-        plugins=(git autojump)
-### prevent overheating
-TLP:power managerment tool<br>
-sudo add-apt-repository ppa:linrunner/tlp<br>
-sudo apt-get update<br>
-sudo apt-get install tlp tlp-rdw<br>
-### touchpad
-sudo apt install libinput-tools<br/>
-sudo apt-get install xdotool<br/>
-sudo gem install fusuma<br/>
-and then you must configure the gestures and website[website](https://italolelis.com/posts/multitouch-gestures-ubuntu-fusuma/)
+### 更换终端类型(oh-my-zsh)
 
-## 软件安装
-### git
-sudo apt install git
-### atom
-download atom  [atom](https://atom.io/ "atom")     
+```Bash
+sudo apt install zsh  curl git
+chsh -s /bin/zsh  
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"    
+sudo apt install autojump
+ vim ~/.zshrc
+        plugins=(git autojump)
+```
+
+### vscode
+
+download [vscode](https://code.visualstudio.com/)
+
 ### chrome
 download chrome [chrome](https://www.chrome64bit.com/index.php/google-chrome-64-bit-for-linux "chrome")     
-### emacs
-sudo apt update         
-sudo apt install emacs  
-### virtualbox
-sudo apt install virtualbox 
-### deepin-wine
-git clone https://github.com/HarryPotterJackson/deepin-wine-ubuntu.git    
-./install.sh
-### software-deepend-deepin-wine
-http://mirrors.aliyun.com/deepin/pool/non-free/d/     
 ### vim
 sudo apt update    
 sudo apt install vim    
 ### gnome-tweak-tool
 sudo apt install gnome-tweak-tool     
-### popup-dict(dirctionary)
-sudo apt install python3-pip   
-sudo apt install python-gi python-gi-cairo python3-gi python3-gi-cairo gir1.2-gtk-3.0      
-sudo pip3 install popupdict    
 ### gnome拓展
 sudo apt install chrome-gnome-shell
 ### wps
 download wps for linux [wps](http://community.wps.cn/download/ "wps_for_linux")   
-### remarkable
-download remarkable for linux [remarkable](http://remarkableapp.github.io/ "remarkable")   
 ### zeal
 sudo apt install zeal     
 ### gitkraken
@@ -101,14 +67,19 @@ download lantern [lantern](https://github.com/HarryPotterJackson/lantern "lanter
 sudo apt install fcitx     
 https://pinyin.sogou.com/linux/?r=pinyin       
 
-
 ## ROS安装
-```bash
-sudo apt install vim    
-sudo vim /etc/apt/sources.list  
-d G     //这是vim命令，意思是删除从当前光标到最后的所有内容。vim命令自行上网学习
+
+### ubuntu 16.04
+
+这是ubuntu16.04版本的ros安装教程，不适用其他版本。
+
+```Bash
+ 
+sudo vim /etc/apt/sources.list  #修改镜像文件
 ```
-<pre>
+```Bash
+
+# 这里的内容是针对ubuntu16.04，其他版本不适用
 #将这里的所有信息直接复制粘贴即可，先删除原文件中的所有内容
 # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse
@@ -119,41 +90,56 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricte
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
-
 # 预发布软件源，不建议启用
+
 # deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+
 # 默认注释了源码仓库，如有需要可自行取消注释
+
 deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
+
 # deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
+
 deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+
 # deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+
 deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+
 # deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+
 deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+
 # deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
 
 # 预发布软件源，不建议启用
+
 # deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+
 # deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
-</pre>
+```
+
+
+
 ```bash
-:wq    //这里仍然是vim命令，意思是写入并退出。
+
 sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" > /etc/apt/sources.list.d/ros-latest.list'    
-sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" >> /etc/apt/sources.list.d/ros-latest.list'    
-sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654    <br/>
+sudo sh -c '. /etc/lsb-release && echo "deb https://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" >> /etc/apt/sources.list.d/ros-latest.list'    
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654    
 sudo apt-get update && sudo apt upgrade    
 sudo apt-get install ros-kinetic-desktop-full    
 ```
 ### Initialize rosdep
 在这一步的update命令上可能会由于网络原因多次失败，重复命令即可，直到成功。
-```
+```Bash
 sudo rosdep init    
 rosdep update
 ```
 ### Environment setup
 更改过终端的要把下面的内容进行对应更改。不知道啥是终端更改的忽略这句话。
-```
+```Bash
 echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
