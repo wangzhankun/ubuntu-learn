@@ -69,6 +69,8 @@ https://pinyin.sogou.com/linux/?r=pinyin
 
 ## ROS安装
 
+在安装源部分需要区分版本，这里提供了16.04和18.04两个安装版本。
+
 ### ubuntu 16.04
 
 这是ubuntu16.04版本的ros安装教程，不适用其他版本。
@@ -121,17 +123,54 @@ deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe
 # deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
 ```
 
-
-
 ```bash
 
 sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" > /etc/apt/sources.list.d/ros-latest.list'    
-sudo sh -c '. /etc/lsb-release && echo "deb https://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" >> /etc/apt/sources.list.d/ros-latest.list'    
+
+sudo sh -c '. /etc/lsb-release && echo "deb https://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" >> /etc/apt/sources.list.d/ros-latest.list'  
+
 sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654    
+
 sudo apt-get update && sudo apt upgrade    
+
 sudo apt-get install ros-kinetic-desktop-full    
 ```
+
+
+### Ubuntu 18.04
+
+```Bash
+# 这里的是18.04的镜像需要根据不同版本进行选择
+  # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+  deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+  # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+  deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+  # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+  deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+  # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+  deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+  # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+  # 预发布软件源，不建议启用
+  # deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+  # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+```
+
+```bash
+sudo sh -c 'echo "deb https://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+
+sudo apt update
+
+sudo apt install ros-melodic-desktop-full
+```
+
+
+
+
+
 ### Initialize rosdep
+
 在这一步的update命令上可能会由于网络原因多次失败，重复命令即可，直到成功。
 ```Bash
 sudo rosdep init    
@@ -157,3 +196,6 @@ sudo apt install python-rosinstall python-rosinstall-generator python-wstool bui
 roscore
 ```
 启动成功即可。最后使用Ctrl+c 退出ROS系统。
+
+
+
