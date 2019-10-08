@@ -29,8 +29,10 @@ sudo gedit /etc/default/ufw
 * change "ipv6=no" into "ipv6=yes" (maybe you should try many times )    
 sudo ufw disable     
 sudo ufw enable    
+
 ### 双系统时间问题
 timedatectl set-local-rtc 1   
+
 ### 更换终端类型(oh-my-zsh)
 
 ```Bash
@@ -49,6 +51,9 @@ download [vscode](https://code.visualstudio.com/)
 
 ### chrome
 download chrome [chrome](https://www.ubuntuupdates.org/ppa/google_chrome?dist=stable)     
+
+### motrix
+[motrix](https://motrix.app/)
 
 ### vim
 sudo apt update    
