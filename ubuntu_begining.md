@@ -49,7 +49,7 @@ sudo apt install autojump
 download [vscode](https://code.visualstudio.com/)
 
 ### chrome
-download chrome [chrome](https://www.chrome64bit.com/index.php/google-chrome-64-bit-for-linux "chrome")     
+download chrome [chrome](https://www.ubuntuupdates.org/ppa/google_chrome?dist=stable)     
 ### vim
 sudo apt update    
 sudo apt install vim    
