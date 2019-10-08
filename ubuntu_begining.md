@@ -45,26 +45,33 @@ sudo apt install autojump
 [detail](https://github.com/denisidoro/navi)
 
 ### vscode
-
 download [vscode](https://code.visualstudio.com/)
 
 ### chrome
 download chrome [chrome](https://www.ubuntuupdates.org/ppa/google_chrome?dist=stable)     
+
 ### vim
 sudo apt update    
 sudo apt install vim    
+
 ### gnome-tweak-tool
 sudo apt install gnome-tweak-tool     
+
 ### gnome拓展
 sudo apt install chrome-gnome-shell
+
 ### wps
-download wps for linux [wps](http://community.wps.cn/download/ "wps_for_linux")   
+download wps for linux [wps](http://community.wps.cn/download/ "wps_for_linux")  
+
 ### zeal
 sudo apt install zeal     
+
 ### gitkraken
 https://www.gitkraken.com/
+
 ### lantern
-download lantern [lantern](https://github.com/HarryPotterJackson/lantern "lantern for linux")    
+download lantern [lantern](https://github.com/HarryPotterJackson/lantern "lantern for linux")   
+
 ### chinese input
 sudo apt install fcitx     
 https://pinyin.sogou.com/linux/?r=pinyin       
