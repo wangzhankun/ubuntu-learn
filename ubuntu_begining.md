@@ -79,7 +79,7 @@ sudo apt install zeal
 https://www.gitkraken.com/
 
 ### lantern
-download lantern [lantern](https://github.com/HarryPotterJackson/lantern "lantern for linux")   
+download lantern [lantern](https://github.com/getlantern/lantern/tree/4dcd9a28dc7272270eca1361b77fe1604c73c622)   
 
 ### chinese input
 sudo apt install fcitx     
