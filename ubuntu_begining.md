@@ -36,13 +36,17 @@ timedatectl set-local-rtc 1
 ### 更换终端类型(oh-my-zsh)
 
 ```Bash
-sudo apt install zsh  curl git vim
+sudo apt install zsh  curl git vim make cmake
 chsh -s /bin/zsh  
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"    
 sudo apt install autojump
  vim ~/.zshrc
         plugins=(git autojump)
 ```
+
+### xmake
+[xmake](https://xmake.io/#/)
+
 ### navi
 [detail](https://github.com/denisidoro/navi)
 
